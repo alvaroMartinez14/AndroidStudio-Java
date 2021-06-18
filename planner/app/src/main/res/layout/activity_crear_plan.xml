@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202732"
+    tools:context="com.alvaro.tfg.CrearPlan">
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="246dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="77dp"
+        android:fontFamily="sans-serif"
+        android:text="Design your plan"
+        android:textColor="#179576"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/tvDesign"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvDesign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="27dp"
+        android:layout_marginRight="27dp"
+        android:layout_marginBottom="54dp"
+        android:text="Put some data about your plan"
+        android:textColor="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/nombre"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/title" />
+
+    <EditText
+        android:id="@+id/desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Description"
+        android:inputType="textPersonName"
+        android:textColor="#E1D6D6"
+        android:textColorHint="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/lugar"
+        app:layout_constraintStart_toStartOf="@+id/nombre"
+        app:layout_constraintTop_toBottomOf="@+id/nombre" />
+
+    <EditText
+        android:id="@+id/nombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginRight="12dp"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Name"
+        android:inputType="textPersonName"
+        android:textColor="#E1D6D6"
+        android:textColorHint="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/desc"
+        app:layout_constraintEnd_toEndOf="@+id/title"
+        app:layout_constraintTop_toBottomOf="@+id/tvDesign" />
+
+    <Button
+        android:id="@+id/calendar"
+        android:layout_width="233dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="72dp"
+        android:background="@drawable/button_rounded_border"
+        android:onClick="agregar_plan"
+        android:text="ADD TO CALENDAR"
+        android:textColor="#E1D6D6"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/agregar" />
+
+    <EditText
+        android:id="@+id/lugar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Place"
+        android:inputType="textPersonName"
+        android:textColor="#E1D6D6"
+        android:textColorHint="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/personas"
+        app:layout_constraintStart_toStartOf="@+id/desc"
+        app:layout_constraintTop_toBottomOf="@+id/desc" />
+
+    <EditText
+        android:id="@+id/personas"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:ems="10"
+        android:hint="Target people"
+        android:inputType="textPersonName"
+        android:textColor="#E1D6D6"
+        android:textColorHint="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/fecha"
+        app:layout_constraintStart_toStartOf="@+id/lugar"
+        app:layout_constraintTop_toBottomOf="@+id/lugar" />
+
+    <Button
+        android:id="@+id/agregar"
+        android:layout_width="229dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="24dp"
+        android:background="@drawable/button_rounded"
+        android:onClick="share_plan"
+        android:text="ADD PLAN"
+        android:textColor="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/calendar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fecha" />
+
+    <EditText
+        android:id="@+id/fecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="52dp"
+        android:clickable="true"
+        android:ems="10"
+        android:focusable="false"
+        android:inputType="date"
+        android:text="Date"
+        android:textColor="#E1D6D6"
+        app:layout_constraintBottom_toTopOf="@+id/agregar"
+        app:layout_constraintStart_toStartOf="@+id/personas"
+        app:layout_constraintTop_toBottomOf="@+id/personas" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
